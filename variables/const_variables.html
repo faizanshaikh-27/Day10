@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variables</title>
+</head>
+<body>
+<p id="demo"></p>
+
+<p id="PI"></p>
+
+<p id="car"></p>
+
+<p id="car1"></p>
+    <script>
+        const pi = 3.14;
+        let a = 44;
+        let b = 33;
+        let c = a + b / pi;
+
+        document.getElementById("demo").innerHTML = "value of c is " + c;
+
+
+        // The const keyword was introduced in ES6 (2015).
+
+        // Variables defined with const cannot be Redeclared.
+
+        // Variables defined with const cannot be Reassigned.
+
+        // Variables defined with const have Block Scope.
+
+        // A const variable cannot be reassigned
+
+        try {
+            const pie = 3.1413121;
+        pie = 3.14;
+        }
+        catch (err){
+                document.getElementById("PI").innerHTML = err;  //TypeError: Assignment to constant variable.
+        }
+
+
+
+
+
+        /*
+            The keyword const is a little misleading.
+
+It does not define a constant value. It defines a constant reference to a value.
+
+Because of this you can NOT:
+
+Reassign a constant value
+Reassign a constant array
+Reassign a constant object
+But you CAN:
+
+Change the elements of constant array
+Change the properties of constant object
+
+        */
+
+
+        //Changing the element of array
+        const carName = ['Honda', 'Toyota', 'BMW', 'Audi']
+
+        carName[0] = "Mercedes"; //Will replace Honda to Mercedes
+
+        carName.push("Ferrari");  //Will add ferrari at the end of an array
+
+        document.getElementById("car").innerHTML = "The new array is " + carName;
+
+
+
+        //changing the property of a constant object
+
+        const car = {type: "Honda", model: "500", color: "White"} //Create an object
+
+        car.color = "red"; //Changing a property
+
+        car.owner = "Faizan"; //Adding a property
+
+        document.getElementById("car1").innerHTML = "The owner of car is " + car.owner + " and the color is " + car.color;
+
+
+    </script>
+</body>
+</html>

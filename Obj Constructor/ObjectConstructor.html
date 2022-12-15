@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ObjectConstructor</title>
+</head>
+<body>
+    <script>
+            function person (fname, lname, age) {
+                this.firstname = fname;
+                this.lastname = lname;
+                this.age = age;
+            }
+
+            // create a person object
+            const details = new person("faizan", "shaikh", 22);
+            console.log(details.firstname + " " + details.lastname + " " + details.age);
+
+
+
+
+
+            // Adding a method to an object
+            function car (name, color, model) {
+                this.carName = name;
+                this.carColor = color;
+                this.carModel = model;
+            }
+
+            // create 2 car object
+            const car1 = new car("Honda", "Black", "x300");
+            const car2 = new car("BMW", "White", "D200");
+
+            //Add a name method
+            car1.name = function() {
+                return this.carName + " " + this.carColor + " " + this.carModel;
+            }
+            console.log(car1.name());
+
+            // you can not add a new property to an existing object constructor:
+
+
+    </script>
+</body>
+</html>

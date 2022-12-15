@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object Properties</title>
+</head>
+<body>
+    <script>
+
+
+// Properties are the most important part of any JavaScript object.
+
+// Properties are the values associated with a JavaScript object.
+
+// A JavaScript object is a collection of unordered properties.
+
+// Properties can usually be changed, added, and deleted, but some are read only.
+
+// JavaScript Object Property syntax
+// ObjectName.Property for eg person.firstName
+
+
+// JavaScript for...in Loop
+// The JavaScript for...in statement loops through the properties of an object.
+
+// Syntax
+// for(let variable in object) {
+    // code to be executed
+// }
+
+const person = {
+    fname: "Faizan",
+    lname: "Shaikh",
+    age: 22
+};
+
+let txt = "";
+for (let x in person) {
+    txt += person[x] + " ";
+}
+console.log(txt);
+
+// You can add new properties to an existing object by simply giving it a value.
+// The delete keyword deletes a property from an object:
+
+const car = {
+    carName: "Audi",
+    carColor: "White",
+    carModel: "500"
+};
+
+car.carAge = 7;
+delete car.carModel;
+console.log(car);
+
+
+// Nested Array
+
+const myObj = {
+  name: "John",
+  age: 30,
+  cars: [
+    {name:"Ford", models:["Fiesta", "Focus", "Mustang"]},
+    {name:"BMW", models:["320", "X3", "X5"]},
+    {name:"Fiat", models:["500", "Panda"]}
+  ]
+};
+console.log(myObj.cars[1].models[2]);
+
+    </script>
+</body>
+</html>

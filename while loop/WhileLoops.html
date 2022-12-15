@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>While Loops</title>
+</head>
+<body>
+    <p id="while"></p>
+    <p id="dowhile"></p>
+    
+    <script>
+
+// The While Loop
+// The while loop loops through a block of code as long as a specified condition is true.
+/*
+Syntax
+while (condition) {
+  // code block to be executed
+}
+*/
+let result = "";
+let i = 0;
+while (i < 100) {
+    result += "<br>The Number is " + i;
+    i++;
+}
+document.getElementById("while").innerHTML = result;
+
+
+/*The Do While Loop
+The do while loop is a variant of the while loop. This loop will execute the code block once, before checking if the condition is true, then it will repeat the loop as long as the condition is true. */
+
+//Syntax
+/* do {
+    // block of code to be executed
+} while (condition); */
+
+let output = "";
+let x = 0;
+do {
+    output += "<br> The number is " + x;
+    x++;
+} while (x < 100);
+document.getElementById("dowhile").innerHTML = output;
+
+
+
+
+
+
+
+
+
+
+    </script>
+
+</body>
+</html>

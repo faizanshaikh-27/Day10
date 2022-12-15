@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Random</title>
+</head>
+<body>
+        <p id="math1"></p>
+        <p id="math2"></p>
+
+        <button onclick="document.getElementById('demo').innerHTML = RandNo(0,10)">Click Here to Generate a Number</button>
+        <p id="demo"></p>
+
+        <button onclick="document.getElementById('demo2').innerHTML = myFunction(0, 100)">Click Here</button>
+        <p id="demo2"></p>
+
+        <script>
+
+        // Math.random() returns a random number between 0 (inclusive),  and 1 (exclusive):
+            document.getElementById("math1").innerHTML = Math.random();
+
+
+        // JavaScript Random Integers
+        // Math.random() used with Math.floor() can be used to return random integers.
+        document.getElementById("math2").innerHTML = Math.floor(Math.random()*10);
+
+        //JavaScript Math.Random()
+        function RandNo(min,max) {
+            return Math.floor(Math.random()*(min - max) + min);
+        }
+
+        //Another Math.Random()
+        function myFunction(minimum, maximum) {
+            return Math.floor(Math.random()*(maximum - minimum) - maximum);
+        }
+
+
+        </script>
+
+
+</body>
+</html>

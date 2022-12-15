@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>practice</title>
+</head>
+<body>
+
+
+    <!-- using var variable -->
+    <p id="demo"></p>
+    <script>
+        
+        var a, b, c;
+        a = 25;
+        b = 33;
+        c = a + b;
+    
+
+        document.getElementById("demo").innerHTML = "value of c is " + c;
+
+        var a = 30;
+        document.write(a);
+
+
+        // Variables declared with the var keyword can NOT have block scope.
+
+        //Variables declared inside a { } block can be accessed from outside the block.
+
+        {
+            var f = 99;
+        }
+        console.log(f);
+        //No errors
+
+
+        var g = 10;
+        //Here value of g is 10
+        {
+            var g = 20; //here the value of g is 20;
+        }
+        console.log(g); //now the new value outside the block scope is 20
+
+        //Hoisting - Variables defined with var are hoisted to the top and can be initialized at any time.
+        //Meaning: You can use the variable before it is declared:
+
+        carName = "Volvo";
+        var carName; //you can declare variable later after it is hosted using var
+        console.log(carName);
+    </script>
+</body>
+</html>

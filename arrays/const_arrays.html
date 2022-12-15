@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>const_Arrays</title>
+</head>
+<body>
+    <p id="demo"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+    <script>
+
+        //It has become a common practice to declare arrays using const
+        const cars = ["Audi", "BMW", "Fiat"];
+        document.getElementById("demo").innerHTML = cars;
+
+
+        // Cannot be Reassigned
+// An array declared with const cannot be reassigned:
+
+
+/*Arrays are Not Constants
+The keyword const is a little misleading.
+
+It does NOT define a constant array. It defines a constant reference to an array.
+
+Because of this, we can still change the elements of a constant array.*/
+
+//create an array
+const fruits = ["apple", "Grapes", "banana", "mango"];
+
+//changing an element of ana array
+fruits[0] = "Orange";
+
+//Adding an element
+fruits.push("Papaya");
+
+//displaying an element
+document.getElementById("demo2").innerHTML = fruits;
+
+
+/*Assigned when Declared
+JavaScript const variables must be assigned a value when they are declared:
+
+Meaning: An array declared with const must be initialized when it is declared.
+
+Using const without initializing the array is a syntax error:*/
+
+
+/*Const Block Scope
+An array declared with const has Block Scope.
+
+An array declared in a block is not the same as an array declared outside the block:*/
+
+const cars2 = ["Saab", "Volvo", "BMW"];
+// Here cars[0] is "Saab"
+{  
+  const cars2 = ["Toyota", "Volvo", "BMW"]; 
+  // Here cars[0] is "Toyota"
+}
+// Here cars[0] is "Saab"
+document.getElementById("demo3").innerHTML = cars2[0];
+
+
+/*Redeclaring Arrays
+Redeclaring an array declared with var is allowed anywhere in a program:
+        var cars = ["Volvo", "BMW"];   // Allowed
+        var cars = ["Toyota", "BMW"];  // Allowed
+        cars = ["Volvo", "Saab"];      // Allowed  */
+
+
+/*Redeclaring or reassigning an array to const, in the same scope, or in the same block, is not allowed:
+var cars = ["Volvo", "BMW"];     // Allowed
+const cars = ["Volvo", "BMW"];   // Not allowed
+{
+  var cars = ["Volvo", "BMW"];   // Allowed
+  const cars = ["Volvo", "BMW"]; // Not allowed
+} */
+    </script>
+</body>
+</html>

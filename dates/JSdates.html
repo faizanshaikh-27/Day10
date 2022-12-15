@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Dates</title>
+</head>
+<body>
+    <p id="date1"></p>
+    <p id="date2"></p>
+    <p id="date3"></p>
+    <p id="date4"></p>
+    <p id="date5"></p>
+    <p id="date6"></p>
+    <p id="date7"></p>
+    <p id="date8"></p>
+    <p id="date9"></p>
+    <p id="date10"></p>
+    <p id="date11"></p>
+    <p id="date12"></p>
+    <p id="date13"></p>
+    <p id="date14"></p>
+    <p id="date15"></p>
+    <p id="date16"></p>
+    <p id="date17"></p>
+    <p id="date18"></p>
+    <p id="date19"></p>
+    <p id="date20"></p>
+    <p id="date21"></p>
+    <p id="date22"></p>
+    <p id="date23"></p>
+    <script>
+
+        //Dates in JavaScript
+        //using date()
+        const a = new Date();
+        document.getElementById("date1").innerHTML = a;
+
+        // Date objects are static. The "clock" is not "running".
+        // The computer clock is ticking, date objects are not.
+
+        /*Creating Date Objects
+Date objects are created with the new Date() constructor.
+
+There are 9 ways to create a new date object:
+
+new Date()
+new Date(date string)
+new Date(year,month)
+new Date(year,month,day)
+new Date(year,month,day,hours)
+new Date(year,month,day,hours,minutes)
+new Date(year,month,day,hours,minutes,seconds)
+new Date(year,month,day,hours,minutes,seconds,ms)
+new Date(milliseconds) */
+
+        //new Date(date string) creates a date object from a date string:
+        const b = new Date("2022-12-07");
+        document.getElementById("date2").innerHTML = b;
+
+        //new Date(year, month, ...) creates a date object with a specified date and time.
+        const c = new Date(2022, 11, 7, 9, 30, 30, 3);
+        document.getElementById("date3").innerHTML = c;
+
+        //Date Methods
+        // When a date object is created, a number of methods allow you to operate on it.
+
+        //When you display a date object in HTML, it is automatically converted to a string, with the toString() method.
+        const d = new Date();
+        document.getElementById("date4").innerHTML = d.toString();
+
+        //The toUTCString() method converts a date to a string using the UTC standard:
+        const e = new Date();
+        document.getElementById("date5").innerHTML = e.toUTCString();
+
+        //The toISOString() method converts a date to a string using the ISO standard:
+        const f = new Date();
+        document.getElementById("date6").innerHTML = f.toISOString();
+
+        // JavaScript ISO Dates
+        // The ISO 8601 syntax (YYYY-MM-DD) is also the preferred JavaScript date format:
+        const g = new Date("2022-12-7");
+        document.getElementById("date7").innerHTML = g;
+
+        //ISO Dates (Year and Month)
+        const h = new Date("2022-12");
+        document.getElementById("date8").innerHTML = h;
+
+        //ISO Dates (Only Year)
+        const i = new Date("2022");
+        document.getElementById("date9").innerHTML = i;
+
+
+
+        /*Date Get Methods
+Method	Description
+getFullYear()	-Get year as a four digit number (yyyy)
+getMonth()	-Get month as a number (0-11)
+getDate()	-Get day as a number (1-31)
+getDay()	-Get weekday as a number (0-6)
+getHours()	-Get hour (0-23)
+getMinutes()	-Get minute (0-59)
+getSeconds()	-Get second (0-59)
+getMilliseconds()	-Get millisecond (0-999)
+getTime()	-Get time (milliseconds since January 1, 1970) */
+
+        // The getFullYear() Method
+        // The getFullYear() method returns the year of a date as a four digit number:
+        const j = new Date("2022-12-7");
+        document.getElementById("date11").innerHTML = j.getFullYear();
+
+        // The getMonth() Method
+        // The getMonth() method returns the month of a date as a number (0-11).
+        const k = new Date("2022-12-7");
+        document.getElementById("date12").innerHTML = k.getMonth();
+
+        // The getDate() Method
+        // The getDate() method returns the day of a date as a number (1-31):
+        const l = new Date();
+        document.getElementById("date13").innerHTML = l.getDate();
+
+        // The getHours() Method
+        // The getHours() method returns the hours of a date as a number (0-23):
+        const m = new Date("2022-12-7");
+        document.getElementById("date14").innerHTML = m.getHours();
+
+        // The getMinutes() Method
+        // The getMinutes() method returns the minutes of a date as a number (0-59):
+        const n = new Date("2022-12-7");
+        document.getElementById("date15").innerHTML = n.getMinutes();
+
+        // The getSeconds() Method
+        // The getSeconds() method returns the seconds of a date as a number (0-59):
+        const o = new Date("2022-12-7");
+        document.getElementById("date16").innerHTML = o.getSeconds();
+
+    /*UTC Date Get Methods
+Method	Same As	Description
+getUTCDate()	getDate()	Returns the UTC date
+getUTCFullYear()	getFullYear()	Returns the UTC year
+getUTCMonth()	getMonth()	Returns the UTC month
+getUTCDay()	getDay()	Returns the UTC day
+getUTCHours()	getHours()	Returns the UTC hour
+getUTCMinutes()	getMinutes()	Returns the UTC minutes
+getUTCSeconds()	getSeconds()	Returns the UTC seconds
+getUTCMilliseconds()	getMilliseconds()	Returns the UTC milliseconds */
+
+
+
+/*Set Date Methods
+Set Date methods are used for setting a part of a date:
+
+Method	Description
+setDate()	Set the day as a number (1-31)
+setFullYear()	Set the year (optionally month and day)
+setHours()	Set the hour (0-23)
+setMilliseconds()	Set the milliseconds (0-999)
+setMinutes()	Set the minutes (0-59)
+setMonth()	Set the month (0-11)
+setSeconds()	Set the seconds (0-59)
+setTime()	Set the time (milliseconds since January 1, 1970) */
+
+// The setFullYear() Method
+// The setFullYear() method sets the year of a date object. In this example to 2020:
+const p = new Date();
+p.setFullYear(2022);
+document.getElementById("date17").innerHTML = p;
+
+// Compare Dates
+// Dates can easily be compared.
+let text;
+const q = new Date();
+const r = new Date();
+r.setFullYear(2022-11-27);
+
+if (r>q) {
+    text = "Today is my Birthday";
+}
+else {
+    text = "Today is not my Birthday";
+}
+document.getElementById("date18").innerHTML = text;
+
+
+
+
+
+
+
+
+
+    </script>
+
+
+</body>
+</html>

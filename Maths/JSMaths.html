@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Math</title>
+</head>
+<body>
+    <p id="math1"></p>
+    <p id="math2"></p>
+    <p id="math3"></p>
+    <p id="math4"></p>
+    <p id="math5"></p>
+    <p id="math6"></p>
+    <p id="math7"></p>
+    <p id="math8"></p>
+    <p id="math9"></p>
+    <p id="math10"></p>
+    <p id="math11"></p>
+    <p id="math12"></p>
+    <p id="math13"></p>
+    <p id="math14"></p>
+    <p id="math15"></p>
+    <p id="math16"></p>
+    <p id="math17"></p>
+    <p id="math18"></p>
+    <p id="math19"></p>
+    <p id="math20"></p>
+    <p id="math21"></p>
+    <p id="math22"></p>
+    <p id="math23"></p>
+    <p id="math24"></p>
+    <p id="math25"></p>
+
+    <script>
+
+
+        /*The Math Object
+Unlike other objects, the Math object has no constructor.
+The Math object is static.
+All methods and properties can be used without creating a Math object first.*/
+
+/*Math Properties (Constants)
+The syntax for any Math property is : Math.property.
+
+JavaScript provides 8 mathematical constants that can be accessed as Math properties:
+
+Example
+Math.E        // returns Euler's number
+Math.PI       // returns PI
+Math.SQRT2    // returns the square root of 2
+Math.SQRT1_2  // returns the square root of 1/2
+Math.LN2      // returns the natural logarithm of 2
+Math.LN10     // returns the natural logarithm of 10
+Math.LOG2E    // returns base 2 logarithm of E
+Math.LOG10E   // returns base 10 logarithm of E  */
+
+
+document.getElementById("math1").innerHTML =  "Math.E: " + Math.E;
+
+document.getElementById("math2").innerHTML =  "Math.PI: " + Math.PI;
+
+document.getElementById("math3").innerHTML =  "Math.SQRT2: " + Math.SQRT2;
+
+document.getElementById("math4").innerHTML =  "Math.SQRT1_2: " + Math.SQRT1_2;
+
+document.getElementById("math5").innerHTML =  "Math.LN2: " + Math.LN2;
+
+document.getElementById("math6").innerHTML =  "Math.LN10: " + Math.LN10;
+
+document.getElementById("math7").innerHTML =  "Math.Log2E: " + Math.LOG2E;
+
+document.getElementById("math8").innerHTML =  "Math.LOG10E: " + Math.LOG10E;
+
+
+// Math Methods
+// The syntax for Math any methods is : Math.method(number)
+
+/*Number to Integer
+There are 4 common methods to round a number to an integer:
+
+Math.round(x)	Returns x rounded to its nearest integer
+Math.ceil(x)	Returns x rounded up to its nearest integer
+Math.floor(x)	Returns x rounded down to its nearest integer
+Math.trunc(x)	Returns the integer part of x (new in ES6) */
+
+// Math.round(x) returns the value of x rounded to its nearest integer:
+document.getElementById("math9").innerHTML = Math.round(9.77);
+
+// Math.ceil(x) returns the value of x rounded up to its nearest integer:
+document.getElementById("math10").innerHTML = Math.ceil(9.01);
+
+// Math.floor(x) returns the value of x rounded down to its nearest integer:
+document.getElementById("math11").innerHTML = Math.floor(5.9);
+
+// Math.trunc(x) returns the integer part of x:
+document.getElementById("math12").innerHTML = Math.trunc(7.7);
+
+// Math.sign(x) returns if x is negative, null or positive:
+document.getElementById("math13").innerHTML = Math.sign(10);
+document.getElementById("math14").innerHTML = Math.sign(-10);
+
+// Math.pow(x, y) returns the value of x to the power of y:
+document.getElementById("math15").innerHTML = Math.pow(5, 3);
+
+// Math.sqrt(x) returns the square root of x:
+document.getElementById("math16").innerHTML = Math.sqrt(144);
+
+// Math.abs(x) returns the absolute (positive) value of x:
+document.getElementById("math17").innerHTML = Math.abs(-5845);
+
+// Math.min() returns the lowest value in a list of arguments:
+document.getElementById("math18").innerHTML = Math.min(50, 54, 23, 65, 13, 56, 76);
+
+// Math.max() returns the highest value in a list of arguments.
+document.getElementById("math19").innerHTML = Math.max(39, 36, 54, 76, 43, 87, 42);
+
+// Math.random() returns a random number between 0 and 1:
+document.getElementById("math20").innerHTML = Math.random();
+
+// The Math.log() Method
+// Math.log(x) returns the natural logarithm of x.
+// The natural logarithm returns the time needed to reach a certain level of growth:
+document.getElementById("math21").innerHTML = Math.log(1);
+document.getElementById("math22").innerHTML = Math.log(2);
+document.getElementById("math23").innerHTML = Math.log(3);
+
+
+// Math.log2(x) returns the base 2 logarithm of x.
+document.getElementById("math24").innerHTML = Math.log2(8);
+
+// Math.log10() returns the base 10 logarithm of a number.
+document.getElementById("math25").innerHTML = Math.log10(1000);
+
+    </script>
+
+
+</body>
+</html>

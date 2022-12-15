@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Practice</title>
+
+    
+<body>
+    <p id="demoo"></p>
+
+    
+</body>
+   <script> 
+    
+    function myFunction() {
+    document.getElementById("paaya").innerHTML = "Paragraph Changed";
+   }
+
+   document.write(77 + 33); // document.write function
+
+    //In JavaScript, the window object is the global scope object. This means that variables, properties, and methods by default belong to the window object. This also means that specifying the window keyword is optional:
+    //  window.alert(11 + 22); // alert box
+    //alert(27 + 33);
+   
+    let x, y, z;
+    x = 10;
+    y = 20;
+    z = x + y;
+    document.getElementById("demoo").innerHTML = "The value of z is " + z;
+
+
+    //Grouped Function
+
+    function grpfun() {
+        document.getElementById("grp1").innerHTML = "Grouped 1 Function";
+        document.getElementById('grp2').innerHTML = "Grouped 2 Function";
+    }
+
+   </script>
+</head>
+<body>
+
+    <br><button type="button" onclick="grpfun()">Click Me</button>
+    <p id="grp1"></p>
+    <p id="grp2"></p>
+
+    <p id="paaya">This is Paragraph</p>
+    <button type="button" onclick="myFunction()">Click Here</button>
+
+    <p id="demo">Changing HTML content using document.getElementById</p>
+    <button type="button" onclick='document.getElementById("demo").innerHTML = "Hello JavaScript"'>Click Me</button>
+
+    <p id="demo2">Changing The content again</p>
+    <button type="button" onclick='document.getElementById("demo2").innerHTML = "Hello World"'>Click Here</button>
+
+    <p id="demo3">This is Apple</p>
+    <button type="button" onclick='document.getElementById("demo3").innerHTML = "This is Banana"'>Click Here</button>
+
+    <p id="demo4">This is Orange</p>
+    <button type="button" onclick='document.getElementById("demo4").innerHTML = "This is Lime"'>Click Here</button>
+
+    <br>
+    <br>
+
+    <!-- shows the number in the new window -->
+    <button type="button" onclick="document.write(3 + 4)">Click to Display Number</button>
+
+    <br>
+    <br>
+    
+    <!-- print contentof current window -->
+    <button type="button" onclick="window.print()">Print This Page</button> 
+
+
+</body>
+</html>

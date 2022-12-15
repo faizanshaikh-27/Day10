@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>variables</title>
+</head>
+
+    <!-- The let keyword was introduced in ES6 (2015).
+
+Variables defined with let cannot be Redeclared.
+
+Variables defined with let must be Declared before use.
+
+Variables defined with let have Block Scope. -->
+
+
+
+<!-- BLOCK SCOPE
+    
+    Before ES6 (2015), JavaScript had only Global Scope and Function Scope.
+
+ES6 introduced two important new JavaScript keywords: let and const.
+
+These two keywords provide Block Scope in JavaScript.
+
+Variables declared inside a { } block cannot be accessed from outside the block:-->
+
+<body>
+    <p id="demo"></p>
+    <script>
+        let a = 20;
+        let b = 30;
+        let c = a * b;
+
+        document.getElementById("demo").innerHTML = "value of c is " + c;
+
+
+        //let redeclare example
+        // let x = 27;
+        // let x = 22;
+
+
+        //Block-Scope Example
+        {
+            let f = 99;
+        }
+        console.log(f);
+        // Uncaught ReferenceError: f is not defined
+
+
+        // Redeclaring a variable using the let keyword can solve this problem.
+
+        // Redeclaring a variable inside a block will not redeclare the variable outside the block:
+        let g = 50; //Here the value of g is 50
+        {
+            let g = 100; //Here the value of g is 100
+        }
+        console.log(g); //Here the value will be back to 50 again
+
+
+
+        //Hoisting in let
+        carName = "Volvo";
+        let carName; //Uncaught ReferenceError: Cannot access 'carName' before initialization
+        console.log(carName);
+    </script>
+</body>
+</html>

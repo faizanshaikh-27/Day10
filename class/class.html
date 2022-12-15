@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class</title>
+</head>
+<body>
+    <p id="class"></p>
+    <p id="constructor"></p>
+    <script>
+
+        // JavaScript Class Syntax
+        // Use the keyword class to create a class.
+        // Always add a method named constructor():
+
+        //Syntax
+        // class ClassName {
+        //     constructor() {...}
+        // }
+        
+        //Example
+        class cars {
+            constructor(name, year) {
+                this.name = name;
+                this.year = year;
+            }
+        }
+
+        const myCar = new cars("Ford", 2019);
+        document.getElementById("class").innerHTML = myCar.name + " " + myCar.year;
+
+
+        // The constructor method is called automatically when a new object is created.
+
+        /* The Constructor Method
+The constructor method is a special method:
+
+It has to have the exact name "constructor"
+It is executed automatically when a new object is created
+It is used to initialize object properties
+If you do not define a constructor method, JavaScript will add an empty constructor method. */
+
+/* Class Methods2020 object methods. 
+
+SYNTAX
+class ClassName {
+  constructor() { ... }
+  method_1() { ... }
+  method_2() { ... }
+  method_3() { ... }
+}
+*/
+
+// A JavaScript class is not an object.
+// It is a template for JavaScript objects.
+
+
+class car {
+    constructor(name, year){
+        this.name = name;
+        this.year = year;
+    } 
+    age(x) {
+        return x - this.year;
+    }
+}
+
+let date = new Date();
+let year = date.getFullYear();
+
+
+
+let myNewCar = new car("Ferrari", "2015");
+document.getElementById("constructor").innerHTML = "My car name is " + myNewCar.name + " and it is " + myNewCar.age(year) + " years old";
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>

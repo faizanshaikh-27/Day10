@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON</title>
+</head>
+<body>
+    <p id="json"></p>
+    <script>
+        // JSON is a format for storing and transporting data.
+        // JSON is often used when data is sent from a server to a web page.
+
+
+
+
+        /*What is JSON?
+JSON stands for JavaScript Object Notation
+JSON is a lightweight data interchange format
+JSON is language independent *
+JSON is "self-describing" and easy to understand
+* The JSON syntax is derived from JavaScript object notation syntax, but the JSON format is text only. Code for reading and generating JSON data can be written in any programming language. */
+
+
+
+/*JSON Arrays
+JSON arrays are written inside square brackets.
+
+Just like in JavaScript, an array can contain objects:
+
+"employees":[
+  {"firstName":"John", "lastName":"Doe"},
+  {"firstName":"Anna", "lastName":"Smith"},
+  {"firstName":"Peter", "lastName":"Jones"}
+]
+*/
+
+// Then, use the JavaScript built-in function JSON.parse() to convert the string into a JavaScript object:
+// const obj = JSON.parse(Text);
+
+let text = '{"employees":[' +
+'{"firstName":"John","lastName":"Doe" },' +
+'{"firstName":"Anna","lastName":"Smith" },' +
+'{"firstName":"Peter","lastName":"Jones" }]}';
+
+const obj = JSON.parse(text);
+document.getElementById("json").innerHTML = obj.employees[1].firstName + " " + obj.employees[1].lastName;
+
+
+
+
+
+
+    </script>
+</body>
+</html>

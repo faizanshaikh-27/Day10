@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function Invocation</title>
+</head>
+<body>
+    <script>
+        // Invoking a JavaScript Function
+
+// The code inside a function is not executed when the function is defined.
+
+// The code inside a function is executed when the function is invoked.
+
+// It is common to use the term "call a function" instead of "invoke a function".
+
+// It is also common to say "call upon a function", "start a function", or "execute a function".
+
+// In this tutorial, we will use invoke, because a JavaScript function can be invoked without being called.
+
+const object = {
+    firstname: "Faizan",
+    lastname: "Shaikh",
+    fullname: function() {
+        return this.firstname + " " + this.lastname;
+    }
+}
+console.log(object.fullname());
+
+
+
+function myFunction(arg1, arg2) {
+    this.firstname = arg1;
+    this.lastname = arg2;
+}
+const obj = new myFunction("Hello", "World");
+console.log(obj.firstname + " " + obj.lastname);
+    </script>
+</body>
+</html>
+
+
+

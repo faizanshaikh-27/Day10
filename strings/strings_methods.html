@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String Methods</title>
+</head>
+<body>
+
+    <p id="demo"></p>
+
+    <p id="demo2"></p>
+
+    <p id="demo3"></p>
+
+    <p id="demo4"></p>
+
+    <p id="demo5"></p>
+
+    <p id="demo6">Hello faizan and faizan</p>
+    <button onclick="myFunction()">Click Here</button>
+
+    <p id="demo7">this all will turn into uppercase</p>
+    <button onclick="upperCase()">Click Here to get upper case</button>
+
+    <p id="demo8">THIS WILL ALL TURN INTO LOWER CASE</p>
+    <button onclick="lowerCase()">Click Here to get Lower case</button>
+
+    <p id="demo9"></p>
+
+    <p id="demo10"></p>
+
+    <p id="demo11"></p>
+
+    <p id="demo12"></p>
+    <script>
+        //String methods help you to work with strings.
+        //Primitive values, like var fullName = "faizan shaikh", cannot have properties or methods (because they are not objects).
+        //But with JavaScript, methods and properties are also available to primitive values. 
+        //because JavaScript treats primitive values as objects when executing methods and properties.
+
+        let text = "abcdefghijklmnopqrstuvwxyz";
+        document.getElementById("demo").innerHTML = text.length;
+
+
+        //Extracting String Parts
+        //There are 3 methods for extracting a part of a string:
+        //slice(start, end)
+        //substring(start, end)
+        //substr(start, length)
+
+
+        //JavaScript Slice(start, end)
+        // slice() extracts a part of a string and returns the extracted part in a new string.
+
+        let str1 = "This is the first string of string method";
+        document.getElementById("demo2").innerHTML = str1.slice(10,21);
+
+
+        //JavaScript String substr()
+        //substr() is similar to slice().
+        //The difference is that the second parameter specifies the length of the extracted part.
+
+        let str2 = "Hello World in JavaScript";
+        document.getElementById("demo3").innerHTML = str2.substring(10);
+
+        //substr() is similar to slice().
+        //If you omit the second parameter, substr() will slice out the rest of the string.
+        // The difference is that the second parameter specifies the length of the extracted part.
+
+        let str3 = "Welcome to JavaScript Tutorials";
+        document.getElementById("demo4").innerHTML = str3.substr(7, 13);
+
+
+        //Replacing String content
+        let str4 = "Hello Faizan";
+        document.getElementById("demo5").innerHTML = str4.replace("Faizan", "World"); //replace faizan to world
+        //The replace() method does not change the string it is called on.
+        //The replace() method returns a new string.
+        //The replace() method replaces only the first match  
+
+
+        //using function to replace text
+        function myFunction()
+        {
+            let text = document.getElementById("demo6").innerHTML; 
+            document.getElementById("demo6").innerHTML = text.replace("faizan", "Shaikh"); //will replace faizan to shaikh one by one
+            //if used /faizan/g it will replace all faizan to shaikh in one click
+        }
+
+
+        function upperCase()
+        {
+            let upCase = document.getElementById("demo7").innerHTML;
+            document.getElementById("demo7").innerHTML = upCase.toUpperCase(); //using toUpperCase(), every character turns capital
+        }
+
+
+        function lowerCase()
+        {
+            let downCase = document.getElementById("demo8").innerHTML;
+            document.getElementById("demo8").innerHTML = downCase.toLowerCase();
+        }
+
+
+        //String concat() method joins two or more string
+        let a = "faizan";
+        let b = "shaikh";
+        let c = a.concat (" ", b);
+        document.getElementById("demo9").innerHTML = c;
+
+
+        //String trim()
+        //The trim() method removes whitespace from both sides of a string:
+
+        let text1 = "       Hello Faizan        ";
+        let text2 = text1.trim();
+        document.getElementById("demo10").innerHTML = "Length of text1 is: " + text1.length + "<br> Length of text2 is: " + text2.length;
+
+
+        //More examples of trim
+        // String trimStart() -- The trimStart() method works like trim(), but removes whitespace only from the start of a string.
+        //String trimEnd() -- The trimEnd() method works like trim(), but removes whitespace only from the end of a string.
+
+
+        //JavaScript String Padding
+        //ECMAScript 2017 added two String methods: 
+        //padStart() and padEnd() to support padding at the beginning and at the end of a string.
+
+        let text3 = "7";
+        document.getElementById("demo11").innerHTML = text3.padStart(9, "x");
+        // The padStart() method pads a string with another string:
+
+        // The padEnd() method pads a string with another string:
+        //For eg The above code will give output xxxxxxxxx9 using padStart()
+        //using same code for padEnd() will give output 9xxxxxxxxx
+
+
+        // Extracting String Characters
+        //There are 3 methods for extracting string characters:
+        //charAt(position)
+        //charCodeAt(position)
+        //Property access [ ]
+
+
+        //charAt(position)-- The charAt() method returns the character at a given position in a string:
+        var char = "Hello World";
+        document.getElementById("demo12").innerHTML = char.charAt(4); 
+
+        //The charCodeAt() method returns the unicode of the character at a given position in a string:
+        //The method returns a UTF-16 code (an integer between 0 and 65535).
+
+        //property access[ ] --- It makes strings look like arrays (but they are not)
+    </script>
+</body>
+</html>

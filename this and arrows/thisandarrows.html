@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>this and Arrows</title>
+</head>
+<body>
+    <p id="this"></p>
+    <p id="arrow"></p>
+    <p id="noarr"></p>
+    <p id="arr"></p>
+    <p id="param"></p>
+    <p id="val"></p>
+    <script>
+
+
+
+        //  this keyword
+        const details = 
+       {
+        fName: "Faizan", 
+        lName: "Shaikh", 
+        age: "22", 
+        gender: "Male", 
+        fullName: function() {
+            return this.fName + " " + this.lName
+        }
+        };
+        document.getElementById("this").innerHTML = details.fullName();
+
+
+        //arrow function
+        let myFunction = (a, b) => a * b;
+        document.getElementById("arrow").innerHTML = myFunction(10, 20);
+
+
+        // Before an arrow function
+        let nonarrow = "";
+        
+        nonarrow = function() {
+            return "Hello world";
+        }
+        document.getElementById("noarr").innerHTML = nonarrow();
+
+
+
+        // using arrow function
+        let arrow = "";
+
+        arrow = () => {
+             return "Hello World";
+        }
+        document.getElementById("arr").innerHTML = arrow();
+
+
+        //arrow functions with parameters
+        let hello = "";
+
+        hello = (value) => {
+            return "Faizan " + value;
+        }
+        document.getElementById("param").innerHTML = hello("Shaikh");
+
+        // This example shows that if you have only one parameter in an Arrow Function, you can skip the parentheses.
+        let name = "";
+        name = value => "Hello " + value;
+        document.getElementById("val").innerHTML = name("World");
+    </script>
+</body>
+</html>

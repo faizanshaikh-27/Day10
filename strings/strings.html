@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Strings</title>
+</head>
+<body>
+    <p id="demo"></p>
+
+    <p id="demo2"></p>
+
+    <p id="demo3"></p>
+    <script>
+        let fname = "Faizan";
+        let lname = "Shaikh";
+
+        document.getElementById("demo").innerHTML = fname + " " + lname;
+
+
+        // String Length
+        //To find the length of a string, use the built-in length property:
+
+        let alphabets = "abcdefghijklmnopqrstuvwxyz";
+        document.getElementById("demo2").innerHTML = alphabets.length;
+
+
+        //JavaScript Strings as Objects
+        //strings can also be defined as objects with the keyword new:
+
+        let x = "faizan"; //x is a string
+
+        let y = new String("faizan"); //y is an object
+
+        //document.getElementById("demo3").innerHTML = typeof x + " <br> " + typeof y;
+
+        document.getElementById("demo3").innerHTML = (x==y);  //returns true values are same faizan
+
+        document.getElementById("demo3").innerHTML = (x===y); //returns false data types are different string and object
+    </script>
+</body>
+</html>

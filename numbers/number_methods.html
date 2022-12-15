@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>number-methods</title>
+</head>
+<body>
+    <p id="demo"></p>
+
+    <p id="demo2"></p>
+
+    <p id="demo3"></p>
+
+    <p id="demo4"></p>
+
+    <p id="demo5"></p>
+    <script>
+
+        // Primitive values (like 3.14 or 2014), cannot have properties and methods (because they are not objects).
+        //But with JavaScript, methods and properties are also available to primitive values, 
+        //because JavaScript treats primitive values as objects when executing methods and properties.
+
+        let x = 123;
+        document.getElementById("demo").innerHTML =
+        x.toString() + "<br>" +
+        (123).toString() + "<br>" +
+        (100 + 23).toString();  //The toString() method converts a number to a string.
+
+
+        let y = 9.656;
+        document.getElementById("demo2").innerHTML =
+        y.toFixed(0) + "<br>" +
+        y.toFixed(2) + "<br>" +
+        y.toFixed(4) + "<br>" +
+        y.toFixed(6);
+
+
+
+        // The toPrecision() Method
+        //toPrecision() returns a string, with a number written with a specified length:
+
+
+        // The valueOf() Method
+        //valueOf() returns a number as a number.
+
+
+        // Converting Variables to Numbers
+        //There are 3 JavaScript methods that can be used to convert variables to numbers:
+        //The Number() method
+        //The parseInt() method
+        //The parseFloat() method
+        //These methods are not number methods, but global JavaScript methods.
+
+
+        //The Number() method --- Number() can be used to convert JavaScript variables to numbers:
+        document.getElementById("demo3").innerHTML = Number("20") +"<br>" +  Number("10 60"); //returns 20 and NaN(not a number)
+        
+
+
+        // The parseInt() Method
+        //parseInt() parses a string and returns a whole number. Spaces are allowed. Only the first number is returned:
+        document.getElementById("demo4").innerHTML = parseInt("10") + "<br>" + parseInt("90 50"); //returns 10 and 90 from second 
+
+
+        // The parseFloat() method converts strings to numbers:
+        document.getElementById("demo5").innerHTML = parseFloat("27.33"); //returns with decimal
+
+
+        /* MAX_VALUE	Returns the largest number possible in JavaScript
+    MIN_VALUE	Returns the smallest number possible in JavaScript
+    POSITIVE_INFINITY	Represents infinity (returned on overflow)
+    NEGATIVE_INFINITY	Represents negative infinity (returned on overflow)
+    NaN	Represents a "Not-a-Number" value */
+    </script>
+</body>
+</html>

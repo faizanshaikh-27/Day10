@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LoopsForIn</title>
+</head>
+<body>
+    <p id="forin"></p>
+    <p id="forin2"></p>
+    <p id="arrfunc"></p>
+    <script>
+
+// The For In Loop
+// The JavaScript for in statement loops through the properties of an Object:
+// for(key in Object){
+//   command to be executed
+// }
+
+
+
+// Example
+// The for in statement loops through the properties of an object:
+const person = [fName = "Faizan", lName = "Shaikh", age = 22];
+let output = "";
+for (let x in person) {
+    output += person[x] + "<br>";
+}
+document.getElementById("forin").innerHTML = output;
+// Example Explained
+// The for in loop iterates over a person object
+// Each iteration returns a key (x)
+// The key is used to access the value of the key
+// The value of the key is person[x]
+
+
+
+
+// For In Over Arrays
+
+// The JavaScript for in statement can also loop over the properties of an Array:
+// Syntax
+// for (variable in array) {
+//   code
+// }
+
+const numbers = [23, 45, 83, 20, 43];
+let result = "";
+for (const x in numbers) {
+    result += numbers[x] + "<br>";    
+    }
+document.getElementById("forin2").innerHTML = result;
+
+
+// Array.forEach()
+// The forEach() method calls a function (a callback function) once for each array element.
+
+const arr = [46 ,65, 63, 45, 89];
+
+let txt = "";
+arr.forEach(myFunction);
+document.getElementById("arrfunc").innerHTML = txt;
+
+function myFunction(value, index , array) {
+ txt += value + "<br>";
+}
+
+// Note that the function takes 3 arguments:
+
+// The item value
+// The item index
+// The array itself
+
+
+
+
+    </script>
+
+</body>
+</html>

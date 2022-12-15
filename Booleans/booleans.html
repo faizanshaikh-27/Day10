@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Booleans</title>
+</head>
+<body>
+    <p id="bool1"></p>
+    <p id="bool2"></p>
+    <p id="bool3"></p>
+    <p id="bool4"></p>
+    <p id="bool5"></p>
+
+
+        <script>
+
+            //  JavaScript Boolean represents one of two values: true or false.
+            // Very often, in programming, you will need a data type that can only have one of two values, like
+            // YES / NO
+            // ON / OFF 
+            // TRUE / FALSE
+            // For this, JavaScript has a Boolean data type. It can only take the values true or false.
+
+
+            document.getElementById("bool1").innerHTML = Boolean((77+33) == 100);
+
+
+            // Everything With a "Value" is True
+            document.getElementById("bool2").innerHTML = "The Number 100 is " + Boolean(100) + "<br>" + "The Number -50 is also " + Boolean(-50) + "<br>" + "Non Empty strings are also " + Boolean("Hello") + "<br>" + "Even the String false is " + Boolean("false") ;
+
+            // Everything Without a "Value" is False
+            document.getElementById("bool3").innerHTML = Boolean((36-36) == 0);
+
+            let x = 0;
+            document.getElementById("bool4").innerHTML = Boolean(x);
+
+            // JavaScript Booleans as Objects
+            // Normally JavaScript booleans are primitive values created from literals:
+            // But booleans can also be defined as objects with the keyword new:
+
+            let a = false;
+            let b = new Boolean(false);
+            document.getElementById("bool5").innerHTML = typeof a + "<br>" + typeof b;
+
+
+            // Do not create Boolean objects.
+            // The new keyword complicates the code and slows down execution speed.
+            // Boolean objects can produce unexpected results:
+
+        </script>
+
+
+</body>
+</html>

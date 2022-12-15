@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objects</title>
+</head>
+<body>
+    <script>
+        // In JavaScript, objects are king. If you understand objects, you understand JavaScript.
+
+        /* In JavaScript, almost "everything" is an object.
+
+Booleans can be objects (if defined with the new keyword)
+
+Numbers can be objects (if defined with the new keyword)
+
+Strings can be objects (if defined with the new keyword)
+
+Dates are always objects
+
+Maths are always objects
+
+Regular expressions are always objects
+
+Arrays are always objects
+
+Functions are always objects
+
+Objects are always objects
+
+All JavaScript values, except primitives, are objects.
+
+*/
+
+
+/* JavaScript Primitive values
+ a primitve value is a value with no properties or methods.
+
+ for eg. 3.14 is a primitive value
+
+ A primitive data type is a data that has a primitive value
+
+ Javascript defines 7 types of primitive dataTypes:
+ 1. string
+ 2. boolean
+ 3. number
+ 4. null
+ 5. undefined
+ 6. symbol
+ 7. bigInt
+
+
+Primitive values are immutable(They cannot be changed)
+for example if x= 27 then value of x can change, but the value of 3.14 cannot be changed.
+
+
+object are variables
+JavaScript variables can contain many values.
+objects are variables too. but objects can contain many values.
+it is written as [name: value]
+*/
+
+const name = {fname: "Faizan", lname: "Shaikh"};
+console.log(name.fname + " " + name.lname);
+// A JavaScript object is a collection of named values
+// It is a common practice to declare objects with the const keyword.
+
+
+
+// Object Methods
+// Methods are the actions that can be performed on an Object
+// Object properties can be both primitive values, other objects, and functions.
+// An object method is an object property containing a function definition.
+// JavaScript objects are containers for named values, called properties and methods.
+
+
+// there are different ways to create an object
+// create a single object using object literal
+// create a single object using the keyword new
+// Define an object constructor, and then create object
+// create an object using object.create()
+
+
+// Using an object Literal
+// Using an object literal, you both define and create an object in one statement.
+// for example const object = {name:value, name:Value, name:value};
+
+const car = {
+    carName: "Honda", 
+    carColor: "Black", 
+    carModel: "City"
+};
+    console.log(car.carName + " " + car.carColor + " " + car.carModel);
+
+
+// Using JavaScript new keyword
+const person = new Object() 
+    person.firstName = "Faizan";
+    person.lastName = "Shaikh";
+    person.age = 22;
+    console.log(person.firstName + " " + person.lastName + " is " + person.age + " years old.");
+
+// Objects are mutable, for eg
+
+const computer = {
+    monitor: "Acer",
+    cpu: "ROG",
+    keyboard: "Razer",
+    Mouse: "Ninja"
+};
+const x = computer; // we can change the name of a variable object
+x.monitor = "Samsung";
+console.log(x.monitor);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>

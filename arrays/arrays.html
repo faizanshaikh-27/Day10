@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>arrays</title>
+</head>
+<body>
+    <p id="demo"></p>
+
+    <p id="demo2"></p>
+
+    <p id="demo3"></p>
+
+    <p id="demo4"></p>
+
+    <p id="demo5"></p>
+
+    <p id="demo6"></p>
+
+    <p id="demo7"></p>
+
+    <p id="demo8"></p>
+
+    <p id="demo9"></p>
+
+    <p id="demo10"></p>
+
+    <p id="demo11"></p>
+    <button onclick="myFunction()">Click Here</button>
+    <script>
+        // array is a special variable, which can hold more than one value:
+        const cars = ["Audi", "BMW", "Mercedes"];
+        document.getElementById("demo").innerHTML = cars;
+        //Array Syntax
+        //const array_name = [item1, item2, ...];  
+
+
+        //Using JavaScript keyword new
+        const fruits = new Array("Apple", "Mango", "Banana");
+        document.getElementById("demo2").innerHTML = fruits;
+
+        // The two examples above do exactly the same. There is no need to use new Array().
+
+
+        const ps1 = ["FIFA", "God of War", "Cricket22"];
+        ps1 [0] = "Prince of Persia";
+        document.getElementById("demo3").innerHTML = ps1; //will change FIFA to prince of Persia
+
+        const name = ["Faizan", "Sameer", "Ahmed", "John", "Raju"];
+        document.getElementById("demo4").innerHTML = name.length; //length of an array will be 5
+
+        //Accessing the first element of an array
+        const number = [1000, 1100, 1200, 1000, 2000];
+        document.getElementById("demo5").innerHTML = number[0];
+
+        //Accessing the last element of an array
+        const num = [50, 100, 150, 200, 250];
+        document.getElementById("demo6").innerHTML = num[num.length -1];
+
+        //Looping an Array
+        const fruit = ["Apple", "Mango", "Banana", "Orange", "Grapes"];
+        let array = fruit.length;
+
+        let text = "<ul>";
+            for (let i = 0; i < array; i++) {
+                text += "<li>" + fruit[i] + "</li>"    
+            }
+            text += "</ul>"
+                document.getElementById("demo7").innerHTML = text;
+
+        
+        //Adding array elements
+        const no = ["1", "2", "3", "4", "5"];
+        document.getElementById("demo8").innerHTML = no;
+
+        function myFunction(){
+            no.push("6");
+            document.getElementById("demo8").innerHTML = no;
+        }
+
+        const point1 = [40];
+        document.getElementById("demo9").innerHTML = point1;
+
+        var point2 = new Array(500);
+        document.getElementById("demo10").innerHTML = point2[0];
+
+
+    </script>
+</body>
+</html>

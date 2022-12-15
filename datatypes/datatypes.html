@@ -1,0 +1,62 @@
+<!-- JavaScript variables can hold different data types: numbers, strings, objects and more: -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data-Types</title>
+</head>
+<body>
+    <p id="demo"></p>
+
+    <p id="demo2"></p>
+
+    <p id="demo3"></p>
+
+    <p id="demo4"></p>
+    <script>
+
+
+            let length = 16; // variable length holding a number
+            
+            let name = "Faizan"; // variable name holding a string
+
+            let x = { firstName: "Faizan", lastName: "Shaikh"}; //variable x holding an object
+
+
+
+            let a = 10 + 20 + "volvo";  //JavaScript treats 16 and 4 as numbers, until it reaches "Volvo"
+
+            document.getElementById("demo"). innerHTML = a;
+
+
+            let b = "Volvo" + 10 + 20; //since the first operand is a string, all operands are treated as strings.
+
+            document.getElementById("demo2").innerHTML = b;
+
+
+
+            //JavaScript has dynamic types. This means that the same variable can be used to hold different data types:
+            
+            let f; //f is undefined
+            f = 27; //f is now a number 
+            f = "Faizan"; //f is now a string
+            //Strings are written with quotes. You can use single or double quotes
+
+            document.getElementById("demo3").innerHTML = f; //output will be Faizan
+
+
+
+            //Type of operators
+            // You can use the JavaScript typeof operator to find the type of a JavaScript variable.
+            //The typeof operator returns the type of a variable or an expression:
+
+            document.getElementById("demo4").innerHTML = typeof "Faizan" + "<br>" + typeof 20 + "<br>" + typeof ["Audi", "BMW", "Toyota"];
+
+    </script>
+
+
+</body>
+</html>

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>More_Arrays</title>
+</head>
+<body>
+<p id="demo1"></p>
+<p id="demo2"></p>
+<p id="demo3"></p>
+<p id="demo4"></p>
+<p id="demo5"></p>
+<p id="demo6"></p>
+<p id="demo7"></p>
+<p id="demo11"></p>
+<p id="demo22"></p>
+<p id="pop1"></p>
+<p id="pop2"></p>
+<p id="num"></p>
+<p id="num2"></p>
+<p id="add"></p>
+<p id="number"></p>
+<p id="number2"></p>
+<p id="number4"></p>
+        <script>
+            //window.alert("Hello");
+
+
+            //Type of Operator
+            const bike = ["suzuki" , "Honda", "Tvs", "Yamaha"];
+        document.getElementById("demo1").innerHTML = typeof bike;
+        //output will be shown an object
+
+
+        //Instance of Operator
+            const fruits = ["apple" , "mango", "banana"];
+            document.getElementById("demo2").innerHTML = fruits instanceof Array;
+
+        //toString()
+            const name = ["Faizan", "Sameer", "Ahmed"];
+            document.getElementById("demo3").innerHTML = name.toString();
+
+        //normal string
+            const age = [22, 23, 24];
+            document.getElementById("demo4").innerHTML = age;
+
+        //join() Method
+            const subject = ["English", "Maths", "Hindi"];
+            document.getElementById("demo5").innerHTML = subject.join("+");
+
+        //pop() Method
+            const Array1 = ["harry", "rohan", "sameer", "NPC"];
+            document.getElementById("demo6").innerHTML = Array1; 
+            Array1.pop();
+            document.getElementById("demo7").innerHTML = Array1;
+
+            const fruit = ["Banana", "Orange", "Apple", "Mango"];
+            document.getElementById("demo11").innerHTML = fruit;
+            fruit.pop();
+            document.getElementById("demo22").innerHTML = fruit;
+
+            const number = [1, 2, 3, 4, 5];
+            document.getElementById("pop1").innerHTML = number;
+            number.pop();
+            document.getElementById("pop2").innerHTML = number;
+
+// Note that the function takes 3 arguments:
+// The item value
+// The item index
+// The array itself
+
+
+//JavaScript Array map()
+// The map() method creates a new array by performing a function on each array element.
+
+// The map() method does not execute the function for array elements without values.
+
+// The map() method does not change the original array.
+
+
+//Array.map()
+const number1 = [27, 47, 89, 52, 42];
+const number2 = number1.map(myFunction);
+console.log(number2);
+document.getElementById("num").innerHTML = number2;
+
+function myFunction (value)
+{
+    return value*2;
+}
+
+
+//JavaScript Array filter()
+// The filter() method creates a new array with array elements that pass a test.
+
+const number3 = [46, 38, 824, 38, 29, 230];
+const number4 = number3.filter(myFunction2);
+console.log(number4);
+document.getElementById("num2").innerHTML = number4;
+
+function myFunction2(value, index, array)   
+{
+    return value > 50;
+}
+
+    
+
+
+//Reduce array by adding up the numbers in an array
+const numbers = [45, 4, 9, 16, 25];
+let sum = numbers.reduce(myFunction);
+
+document.getElementById("add").innerHTML = "The sum is " + sum;
+
+function myFunction(total, value, index, array) {
+  return total + value;
+}
+
+
+
+//The every() method checks if all array values pass a test.
+const numbers2 = [45, 4, 9, 16, 25];
+let allOver18 = numbers2.every(myFunction2);
+
+document.getElementById("number").innerHTML = allOver18;
+
+function myFunction2(value, index, array) {
+  return value > 18;
+}
+
+
+//The some() method checks if some array values pass a test.
+const numbers3 = [45, 4, 9, 16, 25];
+let someOver18 = numbers3.some(myFunction3);
+
+document.getElementById("number2").innerHTML = "Some over 18 is " + someOver18;
+
+function myFunction3(value, index, array) {
+  return value > 18;
+}
+
+
+//JavaScript Array find()
+// The find() method returns the value of the first array element that passes a test function.
+const numbers4 = [4, 9, 16, 25, 29];
+let first = numbers4.find(myFunction4);
+
+document.getElementById("number4").innerHTML = "First number over 18 is " + first;
+
+function myFunction4(value, index, array) {
+  return value > 18;
+}
+
+        </script>
+
+</body>
+</html>

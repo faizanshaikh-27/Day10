@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SwitchCase</title>
+</head>
+<body>
+    <p id="switch"></p>
+    <p id="getDay"></p>
+
+    <script>
+
+        // JavaScript Switch Statement
+        // The switch statement is used to perform different actions based on different conditions.
+        // Use the switch statement to select one of many code blocks to be executed.
+
+        //SYNTAX
+        /*
+        switch(expression){
+            case x;
+            //code block
+            break;
+
+            casey;
+            //code block
+            break;
+
+            default:
+            //code block
+        }
+        */
+
+        //Switch case Example
+        let month;
+        switch (new Date().getMonth()) {
+            case 0:
+                month = "January"; 
+                break;
+            
+            case 1:
+                month = "February";
+                break;
+
+            case 2:
+                month = "March";
+                break;
+            
+            case 3:
+                month = "April";
+                break;
+
+            case 4:
+                month = "May";
+                break;
+            
+            case 5:
+                month = "June";
+                break;
+        
+            case 6:
+                month = "July";
+                break;
+
+            case 7:
+                month = "August";
+                break;
+
+            case 8:
+                month = "September";
+                break;
+
+            case 9:
+                month = "October";
+                break;
+
+            case 10:
+                month = "November";
+                break;
+
+            case 11:
+                month = "December";
+        }
+        document.getElementById("switch").innerHTML = "Today Month is " + month;
+
+
+        // The default Keyword
+        // The default keyword specifies the code to run if there is no case match:
+
+        let day;
+        switch (new Date().getDay()) {
+            case 0:
+                day = "Saturday";
+                break;
+        
+            case 1:
+                day = "Sunday";
+                break;
+
+            default:
+                day = "Today is not the Weekend";
+                break;
+        }
+        document.getElementById("getDay").innerHTML = day;
+
+        
+
+
+
+
+
+
+
+    </script>
+
+
+</body>
+</html>

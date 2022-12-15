@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javaScript Breaks</title>
+</head>
+<body>
+    <p id="break"></p>
+    <p id="cont"></p>
+    <script>
+
+// The break statement "jumps out" of a loop.
+// The continue statement "jumps over" one iteration in the loop.
+// The break statement can also be used to jump out of a loop:
+
+let text = "";
+for (let i = 0; i < 10; i++) {
+  if (i === 6) 
+  { break; }
+  text += "The number is " + i + "<br>";
+}
+
+document.getElementById("break").innerHTML = text;
+
+
+// The Continue Statement
+// The continue statement breaks one iteration (in the loop), if a specified condition occurs, and continues with the next iteration in the loop.
+
+let num = "";
+for (let j = 0; j < 10; j++) {
+    if (j===5) {continue;}
+    num += "<br> The number is " + j;
+}
+document.getElementById("cont").innerHTML = num;
+
+
+
+
+    </script>
+
+
+</body>
+</html>

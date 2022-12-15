@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Obj Methods</title>
+</head>
+<body>
+    <script>
+        const person = {
+            fname: "Faizan",
+            lname: "Shaikh",
+            fullname: function() {
+                return this.fname + " " + this.lname;
+            }
+        };
+        console.log(person.fullname());
+
+
+        // Displaying object in loop
+
+        const car = {
+            carName: "BMW",
+            carColor: "Silver",
+            carModel: "Z300"
+        };
+
+        let text = " ";
+        for (let x in car) {
+            text += car[x] + " ";
+        }
+        console.log(text);
+
+
+        // using object.values
+        const world = {
+            India: "Mumbai",
+            Australia: "Sydney",
+            USA: "Miami"
+        };
+        console.log(Object.values(world));
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>

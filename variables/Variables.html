@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variables</title>
+</head>
+<body>
+    <!-- Variables are containers for storing values. -->
+<!-- 3 ways to define variables: var, let, const 
+    always declare variable with const
+    if u think value of variable can change so use let
+    the value of const variable cannot be changed -->  
+    <h3>JavaScript Variables</h3>
+    <p id="variable1"></p>
+
+    <p id="demo"></p>
+
+    <script>
+        var x, y, z;
+        x = 10;
+        y = 20;
+        z = x + y;
+
+        document.getElementById("variable1").innerHTML = "The value of z is : " + z;
+
+
+
+        let carName;
+        carName = "Volvo";
+
+        document.getElementById("demo").innerHTML = "Car name is " + carName;
+    </script>
+
+
+    <!-- Creating a variable in JavaScript is called "declaring" a variable.
+
+You declare a JavaScript variable with the var or the let keyword:
+var carName;
+or:
+let carName;
+After the declaration, the variable has no value (technically it is undefined).
+
+To assign a value to the variable, use the equal sign:
+
+carName = "Volvo";
+You can also assign a value to the variable when you declare it:
+let carName = "Volvo"; -->
+
+</body>
+</html>

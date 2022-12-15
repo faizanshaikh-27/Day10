@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prototype Object</title>
+</head>
+<body>
+    <script>
+        // The prototype property allows you to add new methods to objects constructors
+        function person (fname, lname, age) {
+            this.firstName = fname;
+            this.lastName = lname;
+            this.age = age;
+        }
+
+        person.prototype.gender = "Male";
+
+        const details = new person ("Faizan", "Shaikh", 22);
+        console.log(details.gender);
+
+
+
+    //  Iterable objects are objects that can be iterated over with for..of.
+    // Example 
+
+    // Iteration over a string
+    // Create a string
+    const fruit = "Mango";
+
+    //List all elements
+    let txt = "";
+    for (let x of fruit) {
+        txt += x + "\n";
+    }
+    console.log(txt);
+
+
+
+    // Iteration over an array
+    // You can use a for..of loop to iterate over the elements of an Array:
+
+    //creating an array
+    const letters = ["a", "b", "c", "d", "e"];
+
+    //list all elements
+    let text = "";
+    for (let x of letters) {
+        text += x + "\n";
+    }
+    console.log(text);
+
+
+    /* An object becomes an iterator when it implements a next() method.
+
+The next() method must return an object with two properties:
+
+value (the next value)
+done (true or false)
+
+value	The value returned by the iterator
+(Can be omitted if done is true)
+
+done	true if the iterator has completed
+false if the iterator has produced a new value
+*/
+
+
+//Home Made Iterables
+
+function myNumbers() {
+    let variableName = 0;
+    //returning an object
+    return {
+        next: function()
+        {
+            variableName +=10;
+            return {value:variableName, done:false};
+        }
+    };
+}
+
+
+//Create Iterable
+const n = myNumbers();
+n.next();
+n.next();
+n.next();
+console.log(n.next().value);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>
